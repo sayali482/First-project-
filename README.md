@@ -22,7 +22,6 @@ def play_game():
                 break
         except ValueError:
             print("⚠️ Please enter a valid number.\n")
-
 # Start the game
 play_game()
 
