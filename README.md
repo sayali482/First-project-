@@ -1,29 +1,4 @@
-
-import random
-
-def play_game():
-    number_to_guess = random.randint(1, 100)
-    attempts = 0
-
-    print("🎮 Welcome to 'Guess the Number'!")
-    print("I'm thinking of a number between 1 and 100. Can you guess it?")
-
-    while True:
-        try:
-            guess = int(input("Enter your guess: "))
-            attempts += 1
-
-            if guess < number_to_guess:
-                print("🔻 Too low! Try again.\n")
-            elif guess > number_to_guess:
-                print("🔺 Too high! Try again.\n")
-            else:
-                print(f"🎉 Congratulations! You guessed the number {number_to_guess} in {attempts} tries!")
-                break
-        except ValueError:
-            print("⚠️ Please enter a valid number.\n")
-# Start the game
-play_game()
+The "Guess the Number" game in Python is a simple yet engaging program that demonstrates key programming concepts in an easy-to-understand way. In this game, the computer randomly selects a number between 1 and 100, and the player tries to guess it. With each guess, the program provides feedback-letting the player know if the guess was too high or too low-until the correct number is guessed. The code uses basic elements such as loops, conditional statements, user input, and random number generation, making it an excellent exercise for beginners learning Python. Additionally, the game keeps track of the number of attempts, which adds a sense of challenge and encourages users to improve their guessing strategy. Overall, this program is a great introduction to interactive programming and logical thinking.
 
 
 
