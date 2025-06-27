@@ -1,0 +1,38 @@
+def calculate_bmi(weight, height):
+    """Calculate BMI using the formula: BMI = weight / (height^2)"""
+    return weight / (height ** 2)
+
+def interpret_bmi(bmi):
+    """Return a basic interpretation of the BMI value."""
+    if bmi < 18.5:
+        return "Underweight"
+    elif 18.5 <= bmi < 25:
+        return "Normal weight"
+    elif 25 <= bmi < 30:
+        return "Overweight"
+    else:
+        return "Obese"
+
+def main():
+    print("=== BMI Calculator ===")
+
+    try:
+        age = int(input("Enter your age (years): "))
+        weight = float(input("Enter your weight (kg): "))
+        height = float(input("Enter your height (meters): "))
+
+        if age <= 0 or weight <= 0 or height <= 0:
+            print("Age, weight, and height must be positive numbers.")
+            return
+
+        bmi = calculate_bmi(weight, height)
+        interpretation = interpret_bmi(bmi)
+
+        print(f"\nYour BMI is: {bmi:.2f}")
+        print(f"Interpretation: {interpretation}")
+
+    except ValueError:
+        print("Invalid input. Please enter numbers only.")
+
+if __name__ == "__main__":
+    main()
