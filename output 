@@ -1,9 +1,0 @@
-$ python bmi_calculator.py
-=== BMI CALCULATOR ===
-Enter your weight (kg): 68
-Enter your height (m): 1.75
-Enter your age: 25
-
-Your BMI is: 22.20
-Category: Normal weight
-Age: 25 years
